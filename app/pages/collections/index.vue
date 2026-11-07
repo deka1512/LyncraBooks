@@ -2,9 +2,9 @@
 import { books } from '~/data/books'
 useSeoMeta({ title: 'Collections | Lyncra Books', description: 'Explorez nos univers de lecture chrétienne : foi, vie avec Christ et connaissance biblique.' })
 const collections = [
-{number:'01',title:'Foi & spiritualité',subtitle:'Approfondir sa relation avec Dieu',description:'Des ouvrages pour connaître davantage Dieu, méditer les Écritures et fortifier sa relation avec Jésus-Christ.',image:'https://images.unsplash.com/photo-1504052434569-70ad5836ab65?auto=format&fit=crop&w=1100&q=85'},
-{number:'02',title:'Vie chrétienne & croissance',subtitle:'Vivre sa foi au quotidien',description:'Des lectures pour développer un caractère chrétien, grandir dans l’amour, le pardon, le service et la persévérance.',image:'https://images.unsplash.com/photo-1473755504818-b72b6dfdc226?auto=format&fit=crop&w=1100&q=85'},
-{number:'03',title:'Bible & connaissance',subtitle:'Comprendre et discerner',description:'Des ressources pour approfondir la connaissance biblique, rechercher la sagesse et discerner les choix à la lumière de la Parole.',image:'https://images.unsplash.com/photo-1495446815901-a7297e633e8d?auto=format&fit=crop&w=1100&q=85'},
+{number:'01',title:'Foi & spiritualité',subtitle:'Approfondir sa relation avec Dieu',description:'Des ouvrages pour connaître davantage Dieu, méditer les Écritures et fortifier sa relation avec Jésus-Christ.',image:'https://images.unsplash.com/photo-1522008660239-1bbdb39444c4?auto=format&fit=crop&w=1100&q=85'},
+{number:'02',title:'Vie chrétienne & croissance',subtitle:'Vivre sa foi au quotidien',description:'Des lectures pour développer un caractère chrétien, grandir dans l’amour, le pardon, le service et la persévérance.',image:'https://images.unsplash.com/photo-1766364984475-53b7cf4d33fe?auto=format&fit=crop&w=1100&q=85'},
+{number:'03',title:'Bible & connaissance',subtitle:'Comprendre et discerner',description:'Des ressources pour approfondir la connaissance biblique, rechercher la sagesse et discerner les choix à la lumière de la Parole.',image:'https://images.unsplash.com/photo-1611242254711-3f3e21033e4b?auto=format&fit=crop&w=1100&q=85'},
 ]
 function countBooks(category:string){return books.filter(book=>book.category===category).length}
 </script>
