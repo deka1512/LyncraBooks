@@ -1,19 +1,19 @@
 <script setup lang="ts">
 import { books } from '~/data/books'
-useSeoMeta({ title: 'Collections | Lyncra Books', description: 'Explorez les grands univers de lecture de Lyncra Books.' })
+useSeoMeta({ title: 'Collections | Lyncra Books', description: 'Explorez nos univers de lecture chrétienne : foi, vie avec Christ et connaissance biblique.' })
 const collections = [
-{number:'01',title:'Foi & spiritualité',subtitle:'Nourrir sa foi',description:'Des lectures pour nourrir la foi, cultiver la méditation et approfondir sa vie intérieure.',image:'https://images.unsplash.com/photo-1504052434569-70ad5836ab65?auto=format&fit=crop&w=1100&q=85'},
-{number:'02',title:'Développement personnel',subtitle:'Grandir et avancer',description:'Des idées pour mieux se connaître, dépasser ses limites et avancer avec intention.',image:'https://images.unsplash.com/photo-1473755504818-b72b6dfdc226?auto=format&fit=crop&w=1100&q=85'},
-{number:'03',title:'Savoir & connaissance',subtitle:'Élargir ses horizons',description:'Des ouvrages pour apprendre, aiguiser son discernement et découvrir de nouvelles perspectives.',image:'https://images.unsplash.com/photo-1495446815901-a7297e633e8d?auto=format&fit=crop&w=1100&q=85'},
+{number:'01',title:'Foi & spiritualité',subtitle:'Approfondir sa relation avec Dieu',description:'Des ouvrages pour connaître davantage Dieu, méditer les Écritures et fortifier sa relation avec Jésus-Christ.',image:'https://images.unsplash.com/photo-1504052434569-70ad5836ab65?auto=format&fit=crop&w=1100&q=85'},
+{number:'02',title:'Vie chrétienne & croissance',subtitle:'Vivre sa foi au quotidien',description:'Des lectures pour développer un caractère chrétien, grandir dans l’amour, le pardon, le service et la persévérance.',image:'https://images.unsplash.com/photo-1473755504818-b72b6dfdc226?auto=format&fit=crop&w=1100&q=85'},
+{number:'03',title:'Bible & connaissance',subtitle:'Comprendre et discerner',description:'Des ressources pour approfondir la connaissance biblique, rechercher la sagesse et discerner les choix à la lumière de la Parole.',image:'https://images.unsplash.com/photo-1495446815901-a7297e633e8d?auto=format&fit=crop&w=1100&q=85'},
 ]
 function countBooks(category:string){return books.filter(book=>book.category===category).length}
 </script>
 <template>
 <div><SiteHeader/><main>
-<section class="collection-hero"><div class="container hero-content"><p class="eyebrow">Explorer nos univers</p><h1>Des idées qui nourrissent.<br><em>Des lectures qui transforment.</em></h1><p>Chaque collection est une invitation à découvrir, apprendre et faire grandir ce qui compte vraiment.</p><a href="#univers" class="discover-link">Explorer les univers <span>↓</span></a></div><span class="hero-decoration">L</span></section>
-<section id="univers" class="container collection-main"><div class="section-intro"><div><p class="eyebrow">Nos univers de lecture</p><h2>Choisissez votre chemin.</h2></div><p>Trois univers, une même envie : vous accompagner dans votre curiosité et votre évolution.</p></div>
-<div class="collection-list"><article v-for="item in collections" :key="item.number" class="collection-card"><div class="collection-visual"><img :src="item.image" :alt="item.title" loading="lazy"><span>{{item.number}}</span></div><div class="collection-copy"><span class="subtitle">{{item.subtitle}}</span><h2>{{item.title}}</h2><p>{{item.description}}</p><div class="collection-meta"><span>{{countBooks(item.title)}} livres dans le catalogue</span><NuxtLink to="/livres">Voir les livres <b>↗</b></NuxtLink></div></div></article></div>
-<div class="collection-cta"><p>Vous ne savez pas par où commencer ?</p><h2>Nous vous aidons à trouver votre prochaine lecture.</h2><NuxtLink to="/contact" class="green-button">Parlons de vos envies <span>↗</span></NuxtLink></div></section>
+<section class="collection-hero"><div class="container hero-content"><p class="eyebrow">Explorer nos univers</p><h1>Une foi à nourrir.<br><em>Une vie à construire avec Christ.</em></h1><p>Chaque collection vous accompagne pour approfondir votre relation avec Dieu, comprendre sa Parole et vivre les valeurs de l’Évangile.</p><a href="#univers" class="discover-link">Explorer les univers <span>↓</span></a></div><span class="hero-decoration">L</span></section>
+<section id="univers" class="container collection-main"><div class="section-intro"><div><p class="eyebrow">Nos univers chrétiens</p><h2>Choisissez votre prochaine étape de foi.</h2></div><p>Trois univers complémentaires pour nourrir votre foi, vivre votre engagement chrétien et approfondir votre connaissance de la Bible.</p></div>
+<div class="collection-list"><article v-for="item in collections" :key="item.number" class="collection-card"><div class="collection-visual"><img :src="item.image" :alt="item.title" loading="lazy"><span>{{item.number}}</span></div><div class="collection-copy"><span class="subtitle">{{item.subtitle}}</span><h2>{{item.title}}</h2><p>{{item.description}}</p><div class="collection-meta"><span>{{countBooks(item.title)}} lectures dans cette collection</span><NuxtLink to="/livres">Voir les livres <b>↗</b></NuxtLink></div></div></article></div>
+<div class="collection-cta"><p>Vous cherchez une lecture adaptée à votre cheminement ?</p><h2>Trouvons ensemble une lecture pour nourrir votre foi.</h2><NuxtLink to="/contact" class="green-button">Parlons de vos envies <span>↗</span></NuxtLink></div></section>
 </main><SiteFooter/></div>
 </template>
 <style scoped>
