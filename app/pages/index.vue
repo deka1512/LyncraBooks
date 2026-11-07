@@ -13,21 +13,21 @@ const collections = [
     number: '01',
     title: 'Foi & spiritualité',
     subtitle: 'Nourrir sa foi',
-    image: 'https://images.unsplash.com/photo-1504052434569-70ad5836ab65?auto=format&fit=crop&w=1100&q=85',
+    image: 'https://images.unsplash.com/photo-1522008660239-1bbdb39444c4?auto=format&fit=crop&w=1100&q=85',
     description: 'Des ouvrages pour mieux connaître Dieu, méditer les Écritures et approfondir sa relation avec Jésus-Christ.',
   },
   {
     number: '02',
     title: 'Vie chrétienne & croissance',
     subtitle: 'Vivre sa foi au quotidien',
-    image: 'https://images.unsplash.com/photo-1473755504818-b72b6dfdc226?auto=format&fit=crop&w=1100&q=85',
+    image: 'https://images.unsplash.com/photo-1766364984475-53b7cf4d33fe?auto=format&fit=crop&w=1100&q=85',
     description: 'Des lectures pour développer un caractère inspiré par les valeurs chrétiennes et vivre sa foi dans ses choix quotidiens.',
   },
   {
     number: '03',
     title: 'Bible & connaissance',
     subtitle: 'Comprendre et discerner',
-    image: 'https://images.unsplash.com/photo-1495446815901-a7297e633e8d?auto=format&fit=crop&w=1100&q=85',
+    image: 'https://images.unsplash.com/photo-1611242254711-3f3e21033e4b?auto=format&fit=crop&w=1100&q=85',
     description: 'Des ressources pour approfondir la connaissance biblique, rechercher la sagesse et exercer son discernement à la lumière de la Parole.',
   },
 ]
@@ -55,7 +55,7 @@ const collections = [
           </div>
           <div class="hero-image">
             <img
-              src="https://images.unsplash.com/photo-1597151051545-f8fa0e73ca38?auto=format&fit=crop&w=1400&q=90"
+              src="https://images.unsplash.com/photo-1650065045891-e3a7c96a4ad7?auto=format&fit=crop&w=1400&q=90"
               alt="Bible ouverte sur une table en bois, prête pour un temps de lecture et de méditation"
               fetchpriority="high"
             >
