@@ -34,6 +34,7 @@ const whatsappUrl = whatsappNumber
           <a href="#collections">Collections</a>
           <a href="#apropos">À propos</a>
           <a href="#contact">Contact</a>
+          <NuxtLink to="/faq">FAQ</NuxtLink>
         </nav>
 
         <a class="header-cta" :href="whatsappUrl" target="_blank" rel="noopener noreferrer">
@@ -281,8 +282,10 @@ const whatsappUrl = whatsappNumber
   .hero-art { transform: scale(.9); }
 }
 @media (max-width: 680px) {
-  .header-inner { justify-content: center; }
-  .main-nav { display: none; }
+  .site-header { height: auto; }
+  .header-inner { height: auto; min-height: var(--header-height); flex-wrap: wrap; justify-content: center; padding-block: 12px; }
+  .main-nav { display: flex; order: 3; width: 100%; justify-content: center; flex-wrap: wrap; gap: 12px 18px; }
+  .main-nav a { font-size: 10px; }
   .hero-grid { grid-template-columns: 1fr; padding-block: 65px 30px; }
   .hero-copy h1 { font-size: clamp(3.4rem, 15vw, 5rem); }
   .hero-note { margin-top: 34px; }
