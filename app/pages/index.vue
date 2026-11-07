@@ -55,8 +55,8 @@ const collections = [
           </div>
           <div class="hero-image">
             <img
-              src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=1400&q=90"
-              alt="Livres ouverts et empilés dans une ambiance chaleureuse"
+              src="https://images.unsplash.com/photo-1597151051545-f8fa0e73ca38?auto=format&fit=crop&w=1400&q=90"
+              alt="Bible ouverte sur une table en bois, prête pour un temps de lecture et de méditation"
               fetchpriority="high"
             >
             <div class="image-caption"><span>LYNCRA BOOKS</span><strong>Lire. Grandir. Transmettre.</strong></div>
@@ -136,19 +136,19 @@ const collections = [
 </template>
 
 <style scoped>
-.hero { overflow: hidden; background: var(--color-ivory); }
+.hero { overflow: hidden; background: var(--color-forest); }
 .hero-grid { min-height: 620px; display: grid; grid-template-columns: 1fr .92fr; align-items: center; gap: clamp(38px, 6vw, 82px); padding-block: 66px; }
 .hero-copy { max-width: 590px; }
 .eyebrow { margin: 0 0 14px; color: var(--color-gold); font-size: 12px; font-weight: 700; letter-spacing: .17em; text-transform: uppercase; }
-.hero-copy h1 { margin: 0; color: var(--color-forest); font-family: var(--font-heading); font-size: clamp(3.5rem, 6.2vw, 5.4rem); font-weight: 600; line-height: .98; letter-spacing: -.025em; }
+.hero-copy h1 { margin: 0; color: var(--color-ivory); font-family: var(--font-heading); font-size: clamp(3.5rem, 6.2vw, 5.4rem); font-weight: 600; line-height: .98; letter-spacing: -.025em; }
 .hero-copy h1 em { color: var(--color-gold); font-weight: 500; }
-.hero-description { max-width: 470px; margin: 24px 0 0; color: var(--color-muted); font-size: 16px; line-height: 1.9; }
+.hero-description { max-width: 470px; margin: 24px 0 0; color: rgba(255,255,255,.78); font-size: 16px; line-height: 1.9; }
 .hero-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 25px; margin-top: 32px; }
-.hero-actions .button span,.button--light span { margin-left: 8px; color: var(--color-gold); }
-.text-link { color: var(--color-forest); font-size: 14px; font-weight: 700; }
-.hero-note { display: flex; align-items: center; gap: 12px; margin-top: 48px; color: #8b857b; font-size: 12px; }
+.hero-actions .button { background: var(--color-ivory); border-color: var(--color-ivory); color: var(--color-forest); }\n.hero-actions .button span,.button--light span { margin-left: 8px; color: var(--color-gold); }
+.text-link { color: var(--color-forest); font-size: 14px; font-weight: 700; }\n.hero-actions .text-link { color: var(--color-ivory); }
+.hero-note { display: flex; align-items: center; gap: 12px; margin-top: 48px; color: rgba(255,255,255,.62); font-size: 12px; }
 .hero-note span { width: 34px; height: 1px; background: var(--color-gold); }
-.hero-image { position: relative; min-height: 490px; overflow: hidden; background: #d9d0c1; }
+.hero-image { position: relative; min-height: 490px; overflow: hidden; background: #d9d0c1; border: 1px solid rgba(255,255,255,.16); }
 .hero-image img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .image-caption { position: absolute; right: 20px; bottom: 20px; left: 20px; display: flex; flex-direction: column; gap: 5px; padding: 20px; background: rgba(25,60,50,.88); color: white; }
 .image-caption span { color: #d9c393; font-size: 10px; letter-spacing: .18em; }
