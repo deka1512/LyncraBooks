@@ -1,0 +1,75 @@
+export interface StaticBook {
+  id: number
+  slug: string
+  title: string
+  author: string
+  category: string
+  image: string
+  summary: string
+  featured: boolean
+}
+
+// Catalogue de démonstration indépendant de WordPress.
+// Les références pourront être remplacées par les données du CMS plus tard.
+export const books: StaticBook[] = [
+  {
+    id: 1,
+    slug: 'grandir-dans-la-foi',
+    title: 'Grandir dans la foi',
+    author: 'Collection Lyncra',
+    category: 'Foi & spiritualité',
+    image: 'https://images.unsplash.com/photo-1504052434569-70ad5836ab65?auto=format&fit=crop&w=900&q=85',
+    summary: 'Des pistes de réflexion pour approfondir sa vie spirituelle et avancer avec confiance.',
+    featured: true,
+  },
+  {
+    id: 2,
+    slug: 'le-courage-de-se-reinventer',
+    title: 'Le courage de se réinventer',
+    author: 'Collection Lyncra',
+    category: 'Développement personnel',
+    image: 'https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&w=900&q=85',
+    summary: 'Un parcours autour de la connaissance de soi, du changement et de la progression personnelle.',
+    featured: true,
+  },
+  {
+    id: 3,
+    slug: 'les-chemins-de-la-sagesse',
+    title: 'Les chemins de la sagesse',
+    author: 'Collection Lyncra',
+    category: 'Savoir & connaissance',
+    image: 'https://images.unsplash.com/photo-1495446815901-a7297e633e8d?auto=format&fit=crop&w=900&q=85',
+    summary: 'Des idées pour nourrir la curiosité, développer son discernement et élargir ses horizons.',
+    featured: true,
+  },
+  {
+    id: 4,
+    slug: 'une-vie-avec-intention',
+    title: 'Une vie avec intention',
+    author: 'Collection Lyncra',
+    category: 'Développement personnel',
+    image: 'https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=900&q=85',
+    summary: 'Réfléchir à ses priorités et donner davantage de sens à ses choix quotidiens.',
+    featured: true,
+  },
+  {
+    id: 5,
+    slug: 'mediter-et-comprendre',
+    title: 'Méditer et comprendre',
+    author: 'Collection Lyncra',
+    category: 'Foi & spiritualité',
+    image: 'https://images.unsplash.com/photo-1519682337058-a94d519337bc?auto=format&fit=crop&w=900&q=85',
+    summary: 'Un espace de lecture et de méditation pour prendre du recul et approfondir sa réflexion.',
+    featured: false,
+  },
+  {
+    id: 6,
+    slug: 'ouvrir-de-nouvelles-perspectives',
+    title: 'Ouvrir de nouvelles perspectives',
+    author: 'Collection Lyncra',
+    category: 'Savoir & connaissance',
+    image: 'https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&fit=crop&w=900&q=85',
+    summary: 'Explorer de nouvelles idées et entretenir le plaisir d’apprendre tout au long de la vie.',
+    featured: false,
+  },
+]
