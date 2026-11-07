@@ -54,7 +54,7 @@ export function useWordPress() {
   function bookCategories(book: WordPressBook) {
     return (book._embedded?.['wp:term'] || [])
       .flat()
-      .filter(term => term.taxonomy === 'category')
+      .filter(term => term.taxonomy !== 'post_tag')
       .map(term => term.name)
   }
 
