@@ -7,6 +7,7 @@ export default defineNuxtConfig({
     wordpressUrl: '',
     public: {
       siteUrl: '',
+      whatsappNumber: '',
     },
   },
   app: {
