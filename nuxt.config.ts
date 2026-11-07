@@ -7,12 +7,12 @@ export default defineNuxtConfig({
     wordpressUrl: '',
     public: {
       siteUrl: '',
-      whatsappNumber: '',
-      contactPhone: '',
-      contactEmail: '',
-      instagramUrl: '',
-      facebookUrl: '',
-      tiktokUrl: '',
+      whatsappNumber: '243822870759',
+      contactPhone: '+243 822 870 759',
+      contactEmail: 'levinzuzi@gmail.com',
+      instagramUrl: 'https://www.instagram.com/lyncrabooks/',
+      facebookUrl: 'https://www.facebook.com/lyncrabooks/',
+      tiktokUrl: 'https://www.tiktok.com/@lyncrabooks',
     },
   },
   app: {
