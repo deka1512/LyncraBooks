@@ -1,5 +1,7 @@
 <script setup lang="ts">
 const config = useRuntimeConfig()
+const { getBooks, bookImage } = useWordPress()
+const { data: featuredBooks } = await useAsyncData('home-featured-books', () => getBooks({ per_page: 4 }))
 const whatsappNumber = config.public.whatsappNumber
 const whatsappMessage = encodeURIComponent(
   'Bonjour Lyncra Books, je souhaite découvrir votre catalogue de livres.',
@@ -89,8 +91,28 @@ const whatsappUrl = whatsappNumber
             plus profonde ou une perspective différente. Trouvez celui qui accompagnera
             votre prochaine étape.
           </p>
-          <span class="coming-soon">Notre catalogue arrive bientôt.</span>
+          <span class="coming-soon">Une sélection de livres pour nourrir votre curiosité et accompagner votre cheminement.</span>
         </div>
+      </div>
+    </section>
+
+    <section class="featured-section">
+      <div class="container">
+        <div class="section-heading">
+          <div><p class="eyebrow">À découvrir</p><h2 class="section-title">Quelques pages à ouvrir.</h2></div>
+          <NuxtLink class="text-link" to="/livres">Tout le catalogue ↗</NuxtLink>
+        </div>
+        <div v-if="featuredBooks?.length" class="featured-grid">
+          <article v-for="book in featuredBooks" :key="book.id" class="featured-card">
+            <NuxtLink class="featured-cover" :to="`/livres/${book.slug}`">
+              <img v-if="bookImage(book)" :src="bookImage(book)" :alt="book.title.rendered" loading="lazy">
+              <span v-else>{{ book.title.rendered }}</span>
+            </NuxtLink>
+            <h3><NuxtLink :to="`/livres/${book.slug}`">{{ book.title.rendered }}</NuxtLink></h3>
+            <NuxtLink class="read-link" :to="`/livres/${book.slug}`">Découvrir ↗</NuxtLink>
+          </article>
+        </div>
+        <div v-else class="featured-empty">Notre sélection de livres sera bientôt disponible.</div>
       </div>
     </section>
 
@@ -224,7 +246,7 @@ const whatsappUrl = whatsappNumber
 .intro-grid .eyebrow { margin-bottom: 18px; }
 .intro-copy { max-width: 480px; color: #77736c; font-size: 13px; line-height: 1.9; }
 .coming-soon { display: inline-block; margin-top: 12px; color: var(--color-forest); font-size: 11px; font-weight: 700; }
-.collections-section { padding-block: 100px; }
+.featured-section { padding-block: 85px; background: #fff; }\n.featured-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:22px; margin-top:35px; }\n.featured-cover { display:flex; aspect-ratio:3/4; align-items:center; justify-content:center; overflow:hidden; padding:18px; background:var(--color-forest); color:var(--color-ivory); font-family:var(--font-heading); font-size:24px; text-align:center; }\n.featured-cover img { width:100%; height:100%; object-fit:cover; }\n.featured-card h3 { margin:12px 0 6px; color:var(--color-forest); font-family:var(--font-heading); font-size:22px; font-weight:600; line-height:1.1; }\n.read-link { color:var(--color-brown); font-size:10px; font-weight:700; }\n.featured-empty { margin-top:28px; padding:28px; background:var(--color-ivory); color:var(--color-muted); font-size:12px; }\n.collections-section { padding-block: 100px; }
 .section-heading { display: flex; justify-content: space-between; align-items: end; margin-bottom: 38px; }
 .section-heading .eyebrow { margin-bottom: 15px; }
 .heading-index { color: var(--color-gold); font-size: 10px; letter-spacing: .15em; }
@@ -265,7 +287,7 @@ const whatsappUrl = whatsappNumber
   .hero-copy h1 { font-size: clamp(3.4rem, 15vw, 5rem); }
   .hero-note { margin-top: 34px; }
   .hero-art { min-height: 370px; transform: scale(.82); transform-origin: top center; margin-bottom: -35px; }
-  .intro-section, .collections-section, .quote-section { padding-block: 70px; }
+  .intro-section, .featured-section, .collections-section, .quote-section { padding-block: 70px; }\n  .featured-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:22px 14px; }
   .intro-grid { grid-template-columns: 1fr; gap: 24px; }
   .collection-grid { grid-template-columns: 1fr; }
   .collection-card { min-height: 220px; }
