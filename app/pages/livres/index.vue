@@ -10,8 +10,8 @@ const visibleBooks = computed(() =>
 )
 
 useSeoMeta({
-  title: 'Catalogue des livres | Lyncra Books',
-  description: 'Parcourez le catalogue Lyncra Books et trouvez votre prochaine lecture.',
+  title: 'Livres chrétiens | Lyncra Books',
+  description: 'Découvrez des livres chrétiens pour nourrir votre foi, méditer la Parole et grandir dans votre marche avec Christ.',
 })
 </script>
 
@@ -19,11 +19,11 @@ useSeoMeta({
   <div>
     <SiteHeader />
     <main class="container page-main">
-      <p class="eyebrow">La bibliothèque</p>
-      <h1 class="section-title">Le catalogue des livres.</h1>
-      <p class="page-intro">Des lectures sélectionnées pour nourrir la réflexion, la foi et la connaissance.</p>
+      <p class="eyebrow">Librairie chrétienne</p>
+      <h1 class="section-title">Des lectures pour grandir avec Dieu.</h1>
+      <p class="page-intro">Des ouvrages pour approfondir votre relation avec Dieu, grandir dans les valeurs de l’Évangile et mieux connaître les Écritures.</p>
 
-      <div class="filters" aria-label="Filtrer les livres par collection">
+      <div class="filters" aria-label="Filtrer les lectures par thème">
         <button
           v-for="category in categories"
           :key="category"
@@ -35,7 +35,7 @@ useSeoMeta({
         </button>
       </div>
 
-      <p class="result-count">{{ visibleBooks.length }} livre(s) dans la sélection</p>
+      <p class="result-count">{{ visibleBooks.length }} ouvrage(s) dans notre sélection chrétienne</p>
       <div class="book-grid">
         <BookCard v-for="book in visibleBooks" :key="book.id" :book="book" />
       </div>
