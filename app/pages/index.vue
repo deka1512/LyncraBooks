@@ -18,15 +18,15 @@ const collections = [
   },
   {
     number: '02',
-    title: 'Développement personnel',
-    subtitle: 'Grandir et avancer',
+    title: 'Vie chrétienne & croissance',
+    subtitle: 'Vivre sa foi au quotidien',
     image: 'https://images.unsplash.com/photo-1473755504818-b72b6dfdc226?auto=format&fit=crop&w=1100&q=85',
     description: 'Des lectures pour développer un caractère inspiré par les valeurs chrétiennes et vivre sa foi dans ses choix quotidiens.',
   },
   {
     number: '03',
-    title: 'Savoir & connaissance',
-    subtitle: 'Élargir ses horizons',
+    title: 'Bible & connaissance',
+    subtitle: 'Comprendre et discerner',
     image: 'https://images.unsplash.com/photo-1495446815901-a7297e633e8d?auto=format&fit=crop&w=1100&q=85',
     description: 'Des ressources pour approfondir la connaissance biblique, rechercher la sagesse et exercer son discernement à la lumière de la Parole.',
   },
@@ -48,8 +48,8 @@ const collections = [
               
             </p>
             <div class="hero-actions">
-              <NuxtLink class="button" to="/livres">Découvrir les livres <span>↗</span></NuxtLink>
-              <NuxtLink class="text-link" to="/collections">Explorer les collections <span>↗</span></NuxtLink>
+              <NuxtLink class="button" to="/livres">Découvrir les livres chrétiens <span>↗</span></NuxtLink>
+              <NuxtLink class="text-link" to="/collections">Explorer nos univers chrétiens <span>↗</span></NuxtLink>
             </div>
             <div class="hero-note"><span></span>Une foi nourrie par la Parole, une vie guidée par Christ.</div>
           </div>
