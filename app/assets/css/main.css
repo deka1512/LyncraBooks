@@ -1,0 +1,122 @@
+:root {
+  color-scheme: light;
+  --color-forest: #193c32;
+  --color-ivory: #f8f5ef;
+  --color-gold: #b89a61;
+  --color-brown: #46372e;
+  --color-white: #ffffff;
+  --color-muted: #77756f;
+  --color-border: rgba(70, 55, 46, 0.14);
+
+  --font-heading: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Inter', Arial, sans-serif;
+
+  --container-width: 1200px;
+  --header-height: 84px;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --shadow-soft: 0 16px 48px rgba(25, 60, 50, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--color-ivory);
+  color: var(--color-brown);
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+a {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+  width: min(var(--container-width), calc(100% - 48px));
+  margin-inline: auto;
+}
+
+.eyebrow {
+  color: var(--color-gold);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.section-title {
+  margin: 0;
+  color: var(--color-forest);
+  font-family: var(--font-heading);
+  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  font-weight: 500;
+  line-height: 1.05;
+}
+
+.button {
+  display: inline-flex;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0 24px;
+  border: 1px solid var(--color-forest);
+  border-radius: var(--radius-sm);
+  background: var(--color-forest);
+  color: var(--color-white);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: background 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  background: transparent;
+  color: var(--color-forest);
+}
+
+.button--outline {
+  background: transparent;
+  color: var(--color-forest);
+}
+
+.button--outline:hover {
+  background: var(--color-forest);
+  color: var(--color-white);
+}
+
+@media (max-width: 640px) {
+  .container {
+    width: min(100% - 32px, var(--container-width));
+  }
+
+  :root {
+    --header-height: 72px;
+  }
+}
