@@ -1,59 +1,77 @@
 # Lyncra Books
 
-Site vitrine et catalogue éditorial de Lyncra Books.
+Site vitrine et catalogue de livres de Lyncra Books.
 
 ## Stack
 
-- Nuxt 4
-- Vue 3
+- Nuxt 4 / Vue 3
 - TypeScript
-- WordPress Headless (CMS)
+- WordPress Headless via l'API REST
 - CSS natif avec variables de design
+- Commandes et demandes via WhatsApp
 
 ## Développement local
 
+Prérequis : Node.js 22 ou plus récent.
+
 ```bash
 npm install
+cp .env.example .env
 npm run dev
 ```
 
-## Configuration
+## Variables d'environnement
 
-Copier `.env.example` vers `.env`, puis renseigner :
-
-- `NUXT_WORDPRESS_URL` : URL de l'installation WordPress utilisée comme CMS.
+- `NUXT_WORDPRESS_URL` : URL de l'installation WordPress (sans slash final).
 - `NUXT_PUBLIC_SITE_URL` : URL publique du site Nuxt.
+- `NUXT_PUBLIC_WHATSAPP_NUMBER` : numéro WhatsApp au format international, chiffres uniquement (ex. indicatif pays + numéro, sans `+` ni espaces).
 
-## Identité visuelle
+## Configuration WordPress
 
-Palette « Élégance naturelle » :
+Le frontend attend un type de contenu personnalisé exposé par l'API REST sous le point d'accès `/wp-json/wp/v2/books`.
 
-- Vert profond : `#193C32`
-- Ivoire : `#F8F5EF`
-- Or doux : `#B89A61`
-- Brun : `#46372E`
-- Blanc : `#FFFFFF`
+Dans WordPress, le type de contenu des livres doit notamment avoir :
 
-Typographies : Cormorant Garamond (titres) et Inter (interface).
+- `show_in_rest: true`
+- un slug REST `books`
+- le support du titre, du contenu, de l'extrait et de l'image mise en avant
+- une ou plusieurs taxonomies exposées dans REST pour organiser les ouvrages
 
-## Fonctionnement commercial
+Les images mises en avant sont utilisées comme couvertures. Les termes des taxonomies (hors étiquettes) sont affichés comme catégories sur les fiches.
 
-- Catalogue consultable sans compte client.
-- Demandes et commandes orientées vers WhatsApp.
-- Aucun panier ni paiement en ligne dans le périmètre initial.
+Le site gère proprement l'absence d'URL WordPress ou un catalogue vide : les pages restent consultables avec un état vide informatif.
 
-## Structure
+## Identité visuelle — Élégance naturelle
 
-```text
-app/
-  app.vue
-  assets/
-    css/
-      main.css
-  pages/
-    index.vue
-nuxt.config.ts
-.env.example
-```
+| Rôle | Couleur |
+|---|---|
+| Vert profond | `#193C32` |
+| Ivoire | `#F8F5EF` |
+| Or doux | `#B89A61` |
+| Brun | `#46372E` |
+| Blanc | `#FFFFFF` |
 
-Le catalogue dynamique et les pages éditoriales seront connectés à WordPress dans les prochaines étapes.
+- Titres : Cormorant Garamond
+- Interface : Inter
+
+## Pages
+
+- `/` : accueil et sélection de livres
+- `/livres` : catalogue dynamique
+- `/livres/:slug` : fiche d'un livre et commande WhatsApp
+- `/collections` : univers éditoriaux
+- `/a-propos` : présentation de Lyncra Books
+- `/contact` : contact WhatsApp
+- `/faq` : questions fréquentes
+
+## Périmètre commercial
+
+- Pas de compte client.
+- Pas de panier.
+- Pas de paiement en ligne.
+- Les commandes sont initiées sur WhatsApp.
+- Les prix et disponibilités sont confirmés par l'équipe.
+
+## Qualité
+
+Le workflow GitHub Actions `Nuxt build` lance l'installation des dépendances et `npm run build` sur chaque push ou pull request vers `main`.
