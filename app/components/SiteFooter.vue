@@ -20,8 +20,8 @@ const navigation = [
       <section class="footer-brand-block" aria-label="À propos de Lyncra Books">
         <NuxtLink class="footer-brand" to="/">Lyncra <span>Books</span></NuxtLink>
         <p class="footer-description">
-          Des livres pour nourrir l’esprit, faire grandir la foi et ouvrir de nouveaux horizons.
-          Chaque lecture est une invitation à apprendre, réfléchir et devenir meilleur.
+          Des lectures pour connaître davantage Dieu, aimer sa Parole et grandir dans une foi vivante.
+          Que chaque livre vous encourage à marcher avec Christ et à mettre l’Évangile en pratique.
         </p>
         <p class="footer-motto">Lire. Grandir. Transmettre.</p>
       </section>
@@ -37,8 +37,8 @@ const navigation = [
 
       <section class="footer-contact">
         <span class="eyebrow">Restons en contact</span>
-        <h2 class="footer-heading footer-contact-title">Une question ou une envie de lire ?</h2>
-        <p>Nous sommes à votre écoute pour vous guider vers votre prochaine lecture.</p>
+        <h2 class="footer-heading footer-contact-title">Une question sur votre prochaine lecture chrétienne ?</h2>
+        <p>Nous sommes à votre écoute pour vous aider à trouver des ressources qui édifient votre foi.</p>
         <a class="footer-contact-link" :href="contactUrl" target="_blank" rel="noopener noreferrer">
           Nous écrire sur WhatsApp <span aria-hidden="true">↗</span>
         </a>
