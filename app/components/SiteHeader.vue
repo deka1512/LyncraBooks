@@ -6,6 +6,7 @@ const links = [
   { label: 'Collections', to: '/collections' },
   { label: 'À propos', to: '/a-propos' },
   { label: 'Contact', to: '/contact' },
+  { label: 'FAQ', to: '/faq' },
 ]
 </script>
 
