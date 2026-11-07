@@ -9,13 +9,13 @@ const socials=[
 {label:'Facebook',url:config.public.facebookUrl,mark:'f'},
 {label:'TikTok',url:config.public.tiktokUrl,mark:'♪'},
 ].filter(item=>item.url)
-useSeoMeta({title:'Contact | Lyncra Books',description:'Contactez Lyncra Books pour toute question sur le catalogue et les commandes.'})
+useSeoMeta({title:'Contact | Lyncra Books',description:'Contactez Lyncra Books pour trouver une lecture chrétienne, approfondir votre foi ou passer une commande.'})
 </script>
 <template>
 <div><SiteHeader/><main>
-<section class="contact-hero"><div class="container"><p class="eyebrow">Restons en contact</p><h1>Une question ?<br><em>Écrivons la suite.</em></h1><p>Un livre vous intéresse, vous souhaitez passer une commande ou simplement obtenir un conseil ? Nous sommes à votre écoute.</p></div></section>
+<section class="contact-hero"><div class="container"><p class="eyebrow">Restons en contact</p><h1>Besoin d’être guidé ?<br><em>Parlons de votre lecture.</em></h1><p>Vous recherchez un ouvrage pour nourrir votre foi, étudier la Bible ou encourager un proche dans sa marche avec Christ ? Nous sommes à votre écoute.</p></div></section>
 <section class="container contact-content">
-<div class="contact-main-card"><span class="contact-icon">✳</span><p class="eyebrow">Le plus simple</p><h2>Discutons sur WhatsApp.</h2><p>Écrivez-nous directement pour connaître la disponibilité d’un livre, son prix ou les modalités de commande.</p><a class="whatsapp-button" :href="contactUrl" target="_blank" rel="noopener noreferrer"><span>◉</span> Continuer sur WhatsApp <b>↗</b></a><small v-if="!number">Le numéro WhatsApp sera activé dès qu’il sera renseigné dans la configuration.</small></div>
+<div class="contact-main-card"><span class="contact-icon">✳</span><p class="eyebrow">Le plus simple</p><h2>Discutons sur WhatsApp.</h2><p>Écrivez-nous pour connaître la disponibilité d’un ouvrage, son prix ou recevoir de l’aide afin de choisir une lecture adaptée à votre cheminement chrétien.</p><a class="whatsapp-button" :href="contactUrl" target="_blank" rel="noopener noreferrer"><span>◉</span> Continuer sur WhatsApp <b>↗</b></a><small v-if="!number">Le numéro WhatsApp sera activé dès qu’il sera renseigné dans la configuration.</small></div>
 <div class="contact-side"><p class="eyebrow">Nos coordonnées</p><h2>À votre écoute.</h2>
 <a v-if="phone" class="contact-line" :href="'tel:'+phone.replace(/\s/g,'')"><span class="line-icon">☎</span><span><small>Téléphone</small><strong>{{phone}}</strong></span><b>↗</b></a>
 <div v-else class="contact-line"><span class="line-icon">☎</span><span><small>Téléphone</small><strong>Coordonnée à renseigner</strong></span></div>
