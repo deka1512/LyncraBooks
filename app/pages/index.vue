@@ -1,9 +1,12 @@
 <script setup lang="ts">
-const whatsappNumber = '243000000000'
+const config = useRuntimeConfig()
+const whatsappNumber = config.public.whatsappNumber
 const whatsappMessage = encodeURIComponent(
   'Bonjour Lyncra Books, je souhaite découvrir votre catalogue de livres.',
 )
-const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`
+const whatsappUrl = whatsappNumber
+  ? `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`
+  : '#contact'
 </script>
 
 <template>
