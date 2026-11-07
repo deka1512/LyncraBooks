@@ -1,4 +1,5 @@
 <script setup lang="ts">
+useSeoMeta({ title: 'Lyncra Books — Des livres pour nourrir votre esprit', description: 'Découvrez des livres inspirants autour de la foi, du développement personnel et de la connaissance. Commandez directement via WhatsApp.' })
 const config = useRuntimeConfig()
 const { getBooks, bookImage } = useWordPress()
 const { data: featuredBooks } = await useAsyncData('home-featured-books', () => getBooks({ per_page: 4 }))
