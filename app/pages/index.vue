@@ -2,8 +2,8 @@
 import { books } from '~/data/books'
 
 useSeoMeta({
-  title: 'Lyncra Books — Des livres pour nourrir votre esprit',
-  description: 'Découvrez une sélection de lectures inspirantes autour de la foi, du développement personnel et de la connaissance.',
+  title: 'Lyncra Books — Des lectures pour grandir dans la foi',
+  description: 'Découvrez des lectures chrétiennes pour approfondir votre relation avec Dieu, méditer la Parole et vivre votre foi au quotidien.',
 })
 
 const featuredBooks = books.filter(book => book.featured).slice(0, 4)
@@ -14,21 +14,21 @@ const collections = [
     title: 'Foi & spiritualité',
     subtitle: 'Nourrir sa foi',
     image: 'https://images.unsplash.com/photo-1504052434569-70ad5836ab65?auto=format&fit=crop&w=1100&q=85',
-    description: 'Des lectures pour approfondir la foi, la méditation et la vie spirituelle.',
+    description: 'Des ouvrages pour mieux connaître Dieu, méditer les Écritures et approfondir sa relation avec Jésus-Christ.',
   },
   {
     number: '02',
     title: 'Développement personnel',
     subtitle: 'Grandir et avancer',
     image: 'https://images.unsplash.com/photo-1473755504818-b72b6dfdc226?auto=format&fit=crop&w=1100&q=85',
-    description: 'Des idées et des outils pour mieux se connaître et progresser.',
+    description: 'Des lectures pour développer un caractère inspiré par les valeurs chrétiennes et vivre sa foi dans ses choix quotidiens.',
   },
   {
     number: '03',
     title: 'Savoir & connaissance',
     subtitle: 'Élargir ses horizons',
     image: 'https://images.unsplash.com/photo-1495446815901-a7297e633e8d?auto=format&fit=crop&w=1100&q=85',
-    description: 'Des ouvrages pour apprendre, réfléchir et découvrir de nouvelles perspectives.',
+    description: 'Des ressources pour approfondir la connaissance biblique, rechercher la sagesse et exercer son discernement à la lumière de la Parole.',
   },
 ]
 </script>
@@ -41,17 +41,17 @@ const collections = [
       <section class="hero">
         <div class="container hero-grid">
           <div class="hero-copy">
-            <p class="eyebrow">La lecture qui inspire</p>
-            <h1>Des livres pour <em>élever</em> l’esprit et nourrir la réflexion.</h1>
+            <p class="eyebrow">La foi qui s’enracine, la vie qui grandit</p>
+            <h1>Des lectures pour <em>fortifier</em> la foi et marcher avec Christ.</h1>
             <p class="hero-description">
-              Explorez des lectures choisies pour accompagner votre cheminement,
-              enrichir vos réflexions et éclairer votre quotidien.
+              Découvrez des ouvrages qui vous encouragent à connaître davantage Dieu, à méditer sa Parole et à laisser les valeurs de l’Évangile guider votre quotidien.
+              
             </p>
             <div class="hero-actions">
               <NuxtLink class="button" to="/livres">Découvrir les livres <span>↗</span></NuxtLink>
               <NuxtLink class="text-link" to="/collections">Explorer les collections <span>↗</span></NuxtLink>
             </div>
-            <div class="hero-note"><span></span>Des lectures choisies avec sens et intention.</div>
+            <div class="hero-note"><span></span>Une foi nourrie par la Parole, une vie guidée par Christ.</div>
           </div>
           <div class="hero-image">
             <img
@@ -68,10 +68,10 @@ const collections = [
         <div class="container intro-grid">
           <div>
             <p class="eyebrow">Notre sélection</p>
-            <h2 class="section-title">Une bibliothèque<br>qui a du sens.</h2>
+            <h2 class="section-title">Une foi qui se nourrit<br>chaque jour.</h2>
           </div>
           <div class="intro-copy">
-            <p>Chaque livre ouvre une porte : vers une nouvelle idée, une compréhension plus profonde ou une perspective différente. Trouvez celui qui accompagnera votre prochaine étape.</p>
+            <p>Nous croyons que la lecture peut accompagner la marche chrétienne : mieux connaître les Écritures, affermir sa foi, grandir en sagesse et mettre en pratique les enseignements du Christ.</p>
             <NuxtLink to="/a-propos" class="text-link">Découvrir notre univers ↗</NuxtLink>
           </div>
         </div>
@@ -80,7 +80,7 @@ const collections = [
       <section class="featured-section">
         <div class="container">
           <div class="section-heading">
-            <div><p class="eyebrow">À découvrir</p><h2 class="section-title">Quelques pages à ouvrir.</h2></div>
+            <div><p class="eyebrow">Pour grandir dans la foi</p><h2 class="section-title">Des lectures pour marcher avec Dieu.</h2></div>
             <NuxtLink class="text-link" to="/livres">Tout le catalogue ↗</NuxtLink>
           </div>
           <div class="book-grid">
@@ -92,7 +92,7 @@ const collections = [
       <section class="collections-section">
         <div class="container">
           <div class="section-heading">
-            <div><p class="eyebrow">Explorer</p><h2 class="section-title">Des univers à découvrir.</h2></div>
+            <div><p class="eyebrow">Explorer</p><h2 class="section-title">Des chemins pour grandir en Christ.</h2></div>
             <NuxtLink to="/collections" class="text-link">Toutes les collections ↗</NuxtLink>
           </div>
           <div class="collection-grid">
@@ -118,15 +118,15 @@ const collections = [
       <section class="quote-section">
         <div class="container quote-inner">
           <span class="quote-mark">“</span>
-          <blockquote>Un bon livre ne remplit pas seulement une étagère. <em>Il ouvre de nouveaux horizons.</em></blockquote>
-          <p class="eyebrow">L’esprit Lyncra Books</p>
+          <blockquote>« Ta parole est une lampe à mes pieds, et une lumière sur mon sentier. » <em>— Psaume 119:105</em></blockquote>
+          <p class="eyebrow">Notre inspiration : la Parole de Dieu</p>
         </div>
       </section>
 
       <section class="contact-section">
         <div class="container contact-inner">
-          <div><p class="eyebrow">Parlons lecture</p><h2>Votre prochain livre<br>vous attend.</h2></div>
-          <div><p>Une question sur un livre ou besoin d’un conseil ? Notre équipe sera heureuse de vous orienter.</p><NuxtLink to="/contact" class="button button--light">Nous contacter <span>↗</span></NuxtLink></div>
+          <div><p class="eyebrow">Grandissons ensemble dans la foi</p><h2>Votre prochaine lecture<br>peut fortifier votre foi.</h2></div>
+          <div><p>Vous cherchez une lecture pour votre marche avec Dieu, une étude biblique ou un cadeau chrétien ? Écrivez-nous, nous serons heureux de vous accompagner.</p><NuxtLink to="/contact" class="button button--light">Nous contacter <span>↗</span></NuxtLink></div>
         </div>
       </section>
     </main>
