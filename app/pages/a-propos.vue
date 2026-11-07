@@ -21,12 +21,13 @@ useSeoMeta({ title: 'À propos | Lyncra Books', description: 'Découvrez la visi
 
 <style scoped>
 .about-main { min-height:65vh; padding-block:90px 110px; }
-.eyebrow { color:var(--color-gold); font-size:10px; letter-spacing:.17em; text-transform:uppercase; }
+.eyebrow { color:var(--color-gold); font-size:12px; letter-spacing:.17em; text-transform:uppercase; }
 h1 { margin:18px 0 32px; color:var(--color-forest); font-family:var(--font-heading); font-size:clamp(52px,8vw,88px); font-weight:500; line-height:.95; }
 h1 em { color:var(--color-gold); font-weight:400; }
-.about-copy { max-width:720px; color:var(--color-muted); font-size:14px; line-height:2; }
+.about-copy { max-width:720px; color:var(--color-muted); font-size:16px; line-height:2; }
 .values { display:grid; grid-template-columns:repeat(3,1fr); gap:30px; margin-top:75px; padding-top:32px; border-top:1px solid var(--color-border); }
-.values span { color:var(--color-gold); font-size:11px; }
+.values span { color:var(--color-gold); font-size:13px; }
 .values h2 { color:var(--color-forest); font-family:var(--font-heading); font-size:27px; font-weight:600; }
-.values p { color:var(--color-muted); font-size:12px; }
+.values p { color:var(--color-muted); font-size:15px; }
 @media(max-width:650px) { .about-main { padding-block:60px 75px; } .values { grid-template-columns:1fr; gap:15px; margin-top:45px; } }
+</style>

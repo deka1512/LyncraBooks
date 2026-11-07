@@ -28,7 +28,7 @@ const questions = [
 
 <style scoped>
 .faq-main { min-height:65vh; padding-block:80px 100px; }
-.eyebrow { color:var(--color-gold); font-size:10px; letter-spacing:.17em; text-transform:uppercase; }
+.eyebrow { color:var(--color-gold); font-size:12px; letter-spacing:.17em; text-transform:uppercase; }
 .section-title { margin:15px 0 45px; color:var(--color-forest); font-family:var(--font-heading); font-size:clamp(45px,7vw,70px); font-weight:500; }
 .faq-list { max-width:850px; border-top:1px solid var(--color-border); }
 details { padding:22px 0; border-bottom:1px solid var(--color-border); }
@@ -36,5 +36,6 @@ summary { display:flex; justify-content:space-between; gap:20px; color:var(--col
 summary::-webkit-details-marker { display:none; }
 summary span { color:var(--color-gold); font-family:var(--font-body); font-size:20px; }
 details[open] summary span { transform:rotate(45deg); }
-details p { max-width:700px; color:var(--color-muted); font-size:13px; line-height:1.8; }
+details p { max-width:700px; color:var(--color-muted); font-size:16px; line-height:1.8; }
 @media(max-width:600px) { .faq-main { padding-block:55px 75px; } summary { font-size:21px; } }
+</style>

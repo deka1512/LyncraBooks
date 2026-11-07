@@ -16,5 +16,8 @@
   },
   "devDependencies": {
     "typescript": "^5.8.0"
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true
   }
 }

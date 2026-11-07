@@ -21,13 +21,14 @@ useSeoMeta({ title: 'Contact | Lyncra Books', description: 'Contactez Lyncra Boo
 
 <style scoped>
 .contact-main { min-height:65vh; padding-block:85px 100px; }
-.eyebrow { color:var(--color-gold); font-size:10px; letter-spacing:.17em; text-transform:uppercase; }
+.eyebrow { color:var(--color-gold); font-size:12px; letter-spacing:.17em; text-transform:uppercase; }
 h1 { margin:18px 0; color:var(--color-forest); font-family:var(--font-heading); font-size:clamp(52px,8vw,86px); font-weight:500; line-height:.95; }
 h1 em { color:var(--color-gold); font-weight:400; }
-.intro { max-width:530px; color:var(--color-muted); font-size:14px; line-height:1.9; }
-.contact-button { display:inline-flex; min-height:50px; align-items:center; margin-top:22px; padding:0 24px; background:var(--color-forest); color:#fff; font-size:11px; font-weight:700; }
-.setup-note { color:var(--color-muted); font-size:11px; }
+.intro { max-width:530px; color:var(--color-muted); font-size:16px; line-height:1.9; }
+.contact-button { display:inline-flex; min-height:50px; align-items:center; margin-top:22px; padding:0 24px; background:var(--color-forest); color:#fff; font-size:14px; font-weight:700; }
+.setup-note { color:var(--color-muted); font-size:14px; }
 .contact-details { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; max-width:760px; margin-top:75px; padding-top:28px; border-top:1px solid var(--color-border); }
-.contact-details span { display:block; color:var(--color-gold); font-size:10px; text-transform:uppercase; letter-spacing:.12em; }
+.contact-details span { display:block; color:var(--color-gold); font-size:12px; text-transform:uppercase; letter-spacing:.12em; }
 .contact-details strong { display:block; margin-top:8px; color:var(--color-forest); font-family:var(--font-heading); font-size:22px; font-weight:600; }
 @media(max-width:600px) { .contact-main { padding-block:60px 75px; } .contact-details { grid-template-columns:1fr; gap:18px; margin-top:45px; } }
+</style>

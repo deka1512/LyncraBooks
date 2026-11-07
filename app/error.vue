@@ -23,8 +23,8 @@ defineProps<{ error: { statusCode?: number; statusMessage?: string; message?: st
 .error-content { max-width:650px; }
 .brand { color:var(--color-forest); font-family:var(--font-heading); font-size:28px; font-weight:700; }
 .brand span { color:var(--color-gold); font-weight:500; }
-.eyebrow { margin-top:65px; color:var(--color-gold); font-size:10px; letter-spacing:.18em; text-transform:uppercase; }
+.eyebrow { margin-top:65px; color:var(--color-gold); font-size:12px; letter-spacing:.18em; text-transform:uppercase; }
 h1 { margin:15px 0; color:var(--color-forest); font-family:var(--font-heading); font-size:clamp(42px,7vw,68px); font-weight:500; line-height:1; }
-.description { color:var(--color-muted); font-size:13px; }
-.home-link { display:inline-flex; margin-top:25px; padding:14px 20px; background:var(--color-forest); color:white; font-size:11px; font-weight:700; }
+.description { color:var(--color-muted); font-size:16px; }
+.home-link { display:inline-flex; margin-top:25px; padding:14px 20px; background:var(--color-forest); color:white; font-size:14px; font-weight:700; }
 </style>

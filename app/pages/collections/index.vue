@@ -28,16 +28,17 @@ const collections = [
 
 <style scoped>
 .page-main { min-height:60vh; padding-block:76px 100px; }
-.eyebrow,.subtitle { color:var(--color-gold); font-size:10px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; }
+.eyebrow,.subtitle { color:var(--color-gold); font-size:12px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; }
 .section-title { max-width:780px; margin:15px 0; color:var(--color-forest); font-family:var(--font-heading); font-size:clamp(42px,6vw,68px); font-weight:500; line-height:1; }
-.intro { max-width:570px; color:var(--color-muted); font-size:13px; line-height:1.8; }
+.intro { max-width:570px; color:var(--color-muted); font-size:16px; line-height:1.8; }
 .collection-list { display:grid; gap:16px; margin-top:48px; }
 .collection-card { min-height:210px; display:grid; grid-template-columns:70px 1fr 40px; align-items:center; gap:20px; padding:30px; color:white; }
 .tone-forest { background:var(--color-forest); }
 .tone-brown { background:var(--color-brown); }
 .tone-gold { background:#86734f; }
-.number { color:#d9c393; font-size:11px; }
+.number { color:#d9c393; font-size:13px; }
 .collection-card h2 { margin:8px 0; font-family:var(--font-heading); font-size:36px; font-weight:500; }
-.collection-card p { margin:0; color:rgba(255,255,255,.7); font-size:12px; }
+.collection-card p { margin:0; color:rgba(255,255,255,.7); font-size:15px; }
 .collection-card a { color:#d9c393; font-size:26px; }
 @media(max-width:600px) { .page-main { padding-block:52px 70px; } .collection-card { grid-template-columns:35px 1fr 25px; padding:20px 15px; } .collection-card h2 { font-size:27px; } }
+</style>

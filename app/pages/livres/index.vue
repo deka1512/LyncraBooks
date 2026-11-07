@@ -42,9 +42,9 @@ useSeoMeta({
 
 <style scoped>
 .page-main { min-height:60vh; padding-block:76px 100px; }
-.eyebrow { color:var(--color-gold); font-size:10px; font-weight:700; letter-spacing:.17em; text-transform:uppercase; }
+.eyebrow { color:var(--color-gold); font-size:12px; font-weight:700; letter-spacing:.17em; text-transform:uppercase; }
 .section-title { margin:14px 0; color:var(--color-forest); font-family:var(--font-heading); font-size:clamp(42px,6vw,66px); font-weight:500; line-height:1; }
-.page-intro { max-width:560px; color:var(--color-muted); font-size:13px; }
+.page-intro { max-width:560px; color:var(--color-muted); font-size:16px; }
 .book-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:34px 22px; margin-top:48px; }
 .book-cover { display:block; aspect-ratio:3/4; overflow:hidden; background:#e9e2d5; box-shadow:var(--shadow-soft); }
 .book-cover img { width:100%; height:100%; object-fit:cover; transition:transform .3s ease; }
@@ -53,12 +53,13 @@ useSeoMeta({
 .cover-placeholder span { color:var(--color-gold); font-family:var(--font-heading); font-size:17px; }
 .cover-placeholder strong { font-family:var(--font-heading); font-size:25px; font-weight:500; line-height:1.1; }
 .book-info { padding-top:14px; }
-.book-category { color:var(--color-gold); font-size:9px; letter-spacing:.1em; text-transform:uppercase; }
+.book-category { color:var(--color-gold); font-size:12px; letter-spacing:.1em; text-transform:uppercase; }
 .book-info h2 { margin:7px 0 10px; color:var(--color-forest); font-family:var(--font-heading); font-size:24px; font-weight:600; line-height:1.1; }
-.read-link { color:var(--color-brown); font-size:10px; font-weight:700; }
+.read-link { color:var(--color-brown); font-size:13px; font-weight:700; }
 .empty-state { margin-top:55px; padding:60px 24px; background:#fff; text-align:center; }
 .empty-icon { color:var(--color-gold); font-size:30px; }
 .empty-state h2 { color:var(--color-forest); font-family:var(--font-heading); font-size:32px; font-weight:500; }
-.empty-state p,.status-message { color:var(--color-muted); font-size:13px; }
+.empty-state p,.status-message { color:var(--color-muted); font-size:16px; }
 @media(max-width:900px) { .book-grid { grid-template-columns:repeat(3,minmax(0,1fr)); } }
 @media(max-width:600px) { .page-main { padding-block:52px 70px; } .book-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:25px 14px; } }
+</style>

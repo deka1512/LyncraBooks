@@ -28,10 +28,11 @@ const contactUrl = link('Bonjour Lyncra Books, je souhaite obtenir des informati
 .footer-main { display:flex; justify-content:space-between; gap:40px; padding-bottom:48px; }
 .footer-brand { font-family:var(--font-heading); font-size:30px; font-weight:700; }
 .footer-brand span { color:var(--color-gold); font-weight:500; }
-.footer-main p { color:rgba(255,255,255,.65); font-size:12px; }
+.footer-main p { color:rgba(255,255,255,.65); font-size:15px; }
 .footer-contact { max-width:390px; }
-.eyebrow { color:#d9c393; font-size:10px; letter-spacing:.16em; text-transform:uppercase; }
+.eyebrow { color:#d9c393; font-size:12px; letter-spacing:.16em; text-transform:uppercase; }
 .footer-contact h2 { margin:12px 0 20px; font-family:var(--font-heading); font-size:36px; font-weight:500; line-height:1.1; }
-.button { display:inline-flex; min-height:46px; align-items:center; padding:0 20px; background:#d9c393; color:var(--color-forest); font-size:11px; font-weight:700; }
-.footer-bottom { display:flex; justify-content:space-between; gap:20px; padding-block:18px; border-top:1px solid rgba(255,255,255,.16); color:rgba(255,255,255,.55); font-size:10px; }
+.button { display:inline-flex; min-height:46px; align-items:center; padding:0 20px; background:#d9c393; color:var(--color-forest); font-size:14px; font-weight:700; }
+.footer-bottom { display:flex; justify-content:space-between; gap:20px; padding-block:18px; border-top:1px solid rgba(255,255,255,.16); color:rgba(255,255,255,.55); font-size:13px; }
 @media(max-width:650px) { .footer-main,.footer-bottom { flex-direction:column; } }
+</style>

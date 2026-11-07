@@ -2,6 +2,7 @@
 
 Site vitrine et catalogue de livres de Lyncra Books.
 
+
 ## Stack
 
 - Nuxt 4 / Vue 3
