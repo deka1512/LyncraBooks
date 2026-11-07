@@ -165,11 +165,15 @@ watch(() => route.path, () => {
 }
 
 .header-cta {
-  padding: 11px 15px;
+  padding: 11px 18px;
   border: 1px solid var(--color-forest);
-  color: var(--color-forest);
+  border-radius: 99px;
+  background: var(--color-forest);
+  color: #fff;
   white-space: nowrap;
+  transition: transform .2s ease, background .2s ease;
 }
+.header-cta:hover { transform: translateY(-2px); background: #245344; }
 
 .header-cta span {
   color: var(--color-gold);
@@ -179,11 +183,13 @@ watch(() => route.path, () => {
 /* Burger */
 .menu-toggle {
   display: none;
-  width: 42px;
-  height: 42px;
+  width: 44px;
+  height: 44px;
   padding: 10px;
   border: 0;
-  background: transparent;
+  border-radius: 50%;
+  background: var(--color-forest);
+  box-shadow: 0 6px 18px rgba(25,60,50,.18);
   cursor: pointer;
   flex-direction: column;
   justify-content: center;
@@ -195,7 +201,7 @@ watch(() => route.path, () => {
   display: block;
   width: 23px;
   height: 2px;
-  background: var(--color-forest);
+  background: #fff;
   transition: transform 0.3s ease;
 }
 
