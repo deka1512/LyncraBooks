@@ -26,8 +26,13 @@ watch(() => route.path, () => {
         to="/"
         aria-label="Lyncra Books, accueil"
       >
-        <span class="brand-mark" aria-hidden="true">L</span>
-        <span class="brand-name">Lyncra <span>Books</span></span>
+        <img
+          class="brand-logo"
+          src="/images/branding/logo.png"
+          alt=""
+          width="118"
+          height="72"
+        >
       </NuxtLink>
 
       <!-- Navigation PC -->
@@ -116,31 +121,14 @@ watch(() => route.path, () => {
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
   color: var(--color-forest);
 }
 
-.brand-mark {
-  width: 36px;
-  height: 36px;
-  display: grid;
-  place-items: center;
-  border: 1px solid var(--color-gold);
-  border-radius: 50%;
-  font-family: var(--font-heading);
-  font-size: 25px;
-}
-
-.brand-name {
-  font-family: var(--font-heading);
-  font-size: 26px;
-  font-weight: 700;
-  line-height: 1;
-}
-
-.brand-name span {
-  color: var(--color-gold);
-  font-weight: 500;
+.brand-logo {
+  display: block;
+  width: 118px;
+  height: 72px;
+  object-fit: contain;
 }
 
 /* Navigation desktop */
@@ -224,8 +212,9 @@ watch(() => route.path, () => {
     padding-block: 10px;
   }
 
-  .brand-name {
-    font-size: 23px;
+  .brand-logo {
+    width: 96px;
+    height: 58px;
   }
 
   .main-nav,
