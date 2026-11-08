@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800">
+<defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#244d40"/><stop offset="1" stop-color="#102820"/></linearGradient></defs>
+<rect width="600" height="800" fill="url(#bg)"/>
+<circle cx="300" cy="355" r="205" fill="none" stroke="#c6a66a" stroke-width="2" opacity=".55"/>
+<circle cx="300" cy="355" r="174" fill="none" stroke="#c6a66a" opacity=".28"/>
+<path d="M300 145v420M90 355h420" stroke="#c6a66a" opacity=".2"/>
+<path d="M300 235c-58 35-88 89-88 157 0 42 34 76 88 102 54-26 88-60 88-102 0-68-30-122-88-157Z" fill="none" stroke="#d8c393" stroke-width="2" opacity=".7"/>
+<text x="300" y="100" fill="#d8c393" font-family="Arial,sans-serif" font-size="19" text-anchor="middle" letter-spacing="7">LYNCRA BOOKS</text>
+<text x="300" y="330" fill="#f7f1e5" font-family="Georgia,serif" font-size="51" text-anchor="middle">GRANDIR DANS</text>
+<text x="300" y="395" fill="#f7f1e5" font-family="Georgia,serif" font-size="66" text-anchor="middle">LA FOI</text>
+<path d="M225 445h150" stroke="#c6a66a" stroke-width="3"/>
+<text x="300" y="500" fill="#d8c393" font-family="Arial,sans-serif" font-size="17" text-anchor="middle" letter-spacing="4">COLLECTION LYNCRA</text>
+<text x="300" y="745" fill="#d8c393" font-family="Arial,sans-serif" font-size="13" text-anchor="middle" letter-spacing="5">FOI · PRIÈRE · CROISSANCE</text>
+</svg>
