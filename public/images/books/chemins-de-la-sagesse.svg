@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800">
+<rect width="600" height="800" fill="#293f50"/>
+<path d="M300 105 520 400 300 695 80 400Z" fill="none" stroke="#d7bd89" stroke-width="3"/>
+<path d="M300 175 455 400 300 625 145 400Z" fill="none" stroke="#d7bd89" opacity=".55" stroke-width="2"/>
+<path d="M300 250v300M150 400h300" stroke="#d7bd89" opacity=".25"/>
+<circle cx="300" cy="400" r="82" fill="none" stroke="#d7bd89" opacity=".6"/>
+<text x="300" y="110" fill="#e7d5b1" font-family="Arial,sans-serif" font-size="19" text-anchor="middle" letter-spacing="7">LYNCRA BOOKS</text>
+<text x="300" y="340" fill="#fff8eb" font-family="Georgia,serif" font-size="56" text-anchor="middle">LES CHEMINS</text>
+<text x="300" y="410" fill="#fff8eb" font-family="Georgia,serif" font-size="56" text-anchor="middle">DE LA SAGESSE</text>
+<path d="M230 455h140" stroke="#d7bd89" stroke-width="3"/>
+<text x="300" y="510" fill="#e7d5b1" font-family="Arial,sans-serif" font-size="16" text-anchor="middle" letter-spacing="4">COLLECTION LYNCRA</text>
+<text x="300" y="745" fill="#e7d5b1" font-family="Arial,sans-serif" font-size="13" text-anchor="middle" letter-spacing="5">BIBLE · DISCERNEMENT · SAGESSE</text>
+</svg>
