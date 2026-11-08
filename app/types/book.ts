@@ -1,4 +1,4 @@
-export interface WordPressRenderedField { rendered?: string }
+export interface WordPressRenderedField { rendered: string }
 export interface WordPressImage { source_url?: string; alt_text?: string; media_details?: { sizes?: Record<string, { source_url?: string }> } }
 export interface Author { id: number; name: string; slug: string; portrait: string; biography: string; shortBio: string }
 export interface WordPressBook {
