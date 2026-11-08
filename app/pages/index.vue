@@ -1,7 +1,8 @@
 <script setup lang="ts">
   useSeoMeta({ title: 'Lyncra Books — Des livres pour nourrir votre esprit', description: 'Découvrez des livres inspirants autour de la foi, du développement personnel et de la connaissance. Commandez directement via WhatsApp.' })
   const config = useRuntimeConfig()
-  const { getBooks, bookImage } = useWordPress()
+  const { getBooks, getCategories, bookImage } = useWordPress()
+  const { data: homeCategories } = await useAsyncData('home-categories', getCategories)
   const { data: featuredBooks } = await useAsyncData('home-featured-books', () => getBooks({ per_page: 4 }))
   const whatsappNumber = config.public.whatsappNumber
   const whatsappMessage = encodeURIComponent(
@@ -103,30 +104,14 @@
           <span class="heading-index">01 — 03</span>
         </div>
         <div class="collection-grid">
-          <article class="collection-card collection-card--one">
-            <span class="collection-number">01</span>
+          <NuxtLink v-for="(category, index) in (homeCategories || []).slice(0, 3)" :key="category.id" :to="`/collections/${category.slug}`" class="collection-card" :class="`collection-card--${['one','two','three'][index]}`">
+            <span class="collection-number">0{{ index + 1 }}</span>
             <div>
-              <p>Approfondir</p>
-              <h3>Foi & spiritualité</h3>
-              <span class="collection-arrow">↗</span>
+              <p>Explorer</p>
+              <h3>{{ category.name }}</h3>
+              <span class="collection-arrow">Découvrir ↗</span>
             </div>
-          </article>
-          <article class="collection-card collection-card--two">
-            <span class="collection-number">02</span>
-            <div>
-              <p>Se construire</p>
-              <h3>Développement personnel</h3>
-              <span class="collection-arrow">↗</span>
-            </div>
-          </article>
-          <article class="collection-card collection-card--three">
-            <span class="collection-number">03</span>
-            <div>
-              <p>Comprendre</p>
-              <h3>Savoir & connaissance</h3>
-              <span class="collection-arrow">↗</span>
-            </div>
-          </article>
+          </NuxtLink>
         </div>
       </div>
     </section>
