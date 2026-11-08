@@ -85,6 +85,7 @@
               <span v-else>{{ book.title.rendered }}</span>
             </NuxtLink>
             <h3><NuxtLink :to="`/livres/${book.slug}`">{{ book.title.rendered }}</NuxtLink></h3>
+            <p v-if="book.authors?.length" class="featured-author">Par {{ book.authors.map(author => author.name).join(' · ') }}</p>
             <NuxtLink class="read-link" :to="`/livres/${book.slug}`">Découvrir ↗</NuxtLink>
           </article>
         </div>
@@ -226,6 +227,7 @@
 .featured-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:22px; margin-top:35px; }
 .featured-cover { display:flex; aspect-ratio:3/4; align-items:center; justify-content:center; overflow:hidden; padding:18px; background:var(--color-forest); color:var(--color-ivory); font-family:var(--font-heading); font-size:24px; text-align:center; }
 .featured-cover img { width:100%; height:100%; object-fit:cover; }
+.featured-author { margin:0 0 8px; color:var(--color-muted); font-size:12px; }
 .featured-card h3 { margin:12px 0 6px; color:var(--color-forest); font-family:var(--font-heading); font-size:22px; font-weight:600; line-height:1.1; }
 .read-link { color:var(--color-brown); font-size:13px; font-weight:700; }
 .featured-empty { margin-top:28px; padding:28px; background:var(--color-ivory); color:var(--color-muted); font-size:15px; }
