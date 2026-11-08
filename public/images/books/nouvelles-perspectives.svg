@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800">
+<defs><linearGradient id="bg" x2="0" y2="1"><stop stop-color="#314e55"/><stop offset="1" stop-color="#172f35"/></linearGradient></defs>
+<rect width="600" height="800" fill="url(#bg)"/>
+<circle cx="300" cy="355" r="115" fill="#d7bd89" opacity=".9"/>
+<path d="M0 440 130 330l100 100 115-135 120 125 135-110v490H0Z" fill="#547066"/>
+<path d="M0 540 150 420l110 100 130-120 105 105 105-80v375H0Z" fill="#243e3b"/>
+<path d="M300 180v390M105 375h390" stroke="#f0dfbd" opacity=".28"/>
+<text x="300" y="105" fill="#e7d5b1" font-family="Arial,sans-serif" font-size="19" text-anchor="middle" letter-spacing="7">LYNCRA BOOKS</text>
+<text x="300" y="300" fill="#fff8eb" font-family="Georgia,serif" font-size="58" text-anchor="middle">OUVRIR DE</text>
+<text x="300" y="365" fill="#fff8eb" font-family="Georgia,serif" font-size="58" text-anchor="middle">NOUVELLES</text>
+<text x="300" y="430" fill="#fff8eb" font-family="Georgia,serif" font-size="49" text-anchor="middle">PERSPECTIVES</text>
+<path d="M225 475h150" stroke="#d7bd89" stroke-width="3"/>
+<text x="300" y="530" fill="#e7d5b1" font-family="Arial,sans-serif" font-size="16" text-anchor="middle" letter-spacing="4">COLLECTION LYNCRA</text>
+</svg>
