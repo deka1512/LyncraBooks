@@ -28,6 +28,7 @@ useSeoMeta({
         <div class="detail-copy">
           <p class="eyebrow">{{ bookCategories(book).join(' · ') || 'Sélection Lyncra' }}</p>
           <h1>{{ book.title.rendered }}</h1>
+          <p v-if="book.authors?.length" class="book-authors">Par <NuxtLink v-for="(author, index) in book.authors" :key="author.id" :to="`/auteurs/${author.slug}">{{ index ? `, ` : '' }}{{ author.name }}</NuxtLink></p>
           <div v-if="book.excerpt?.rendered" class="book-excerpt" v-html="book.excerpt.rendered" />
           <div v-if="book.content?.rendered" class="book-content" v-html="book.content.rendered" />
           <a class="order-button" :href="orderLink(book.title.rendered)" target="_blank" rel="noopener noreferrer">Commander sur WhatsApp ↗</a>
@@ -50,6 +51,8 @@ useSeoMeta({
 .cover-placeholder strong { font-family:var(--font-heading); font-size:32px; font-weight:500; }
 .eyebrow { color:var(--color-gold); font-size:12px; letter-spacing:.15em; text-transform:uppercase; }
 .detail-copy h1 { margin:14px 0 20px; color:var(--color-forest); font-family:var(--font-heading); font-size:clamp(42px,6vw,66px); font-weight:500; line-height:1; }
+.book-authors { margin:0 0 18px; color:var(--color-muted); font-size:14px; }
+.book-authors a { color:var(--color-gold); font-weight:700; }
 .book-excerpt,.book-content { color:var(--color-muted); font-size:16px; line-height:1.9; }
 .book-content { margin-top:24px; }
 .order-button { display:inline-flex; min-height:48px; align-items:center; margin-top:28px; padding:0 22px; background:var(--color-forest); color:white; font-size:14px; font-weight:700; }
