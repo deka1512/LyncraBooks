@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800">
+<defs><linearGradient id="bg" x2="0" y2="1"><stop stop-color="#b18b68"/><stop offset="1" stop-color="#5c5147"/></linearGradient></defs>
+<rect width="600" height="800" fill="url(#bg)"/>
+<circle cx="430" cy="205" r="92" fill="#ead7b6" opacity=".72"/>
+<path d="M0 540 150 355l105 125 135-205 210 245v280H0Z" fill="#d2b994"/>
+<path d="M0 635 185 470l130 130 150-155 135 120v235H0Z" fill="#45594b"/>
+<path d="M300 800 300 590 370 510" fill="none" stroke="#f3e6d1" stroke-width="5" opacity=".8"/>
+<text x="300" y="105" fill="#fff7e9" font-family="Arial,sans-serif" font-size="19" text-anchor="middle" letter-spacing="7">LYNCRA BOOKS</text>
+<text x="300" y="285" fill="#fff8ed" font-family="Georgia,serif" font-size="43" text-anchor="middle">LE COURAGE DE</text>
+<text x="300" y="345" fill="#fff8ed" font-family="Georgia,serif" font-size="47" text-anchor="middle">SE RÉINVENTER</text>
+<path d="M220 390h160" stroke="#f0d7ad" stroke-width="3"/>
+<text x="300" y="445" fill="#fff0d7" font-family="Arial,sans-serif" font-size="16" text-anchor="middle" letter-spacing="4">COLLECTION LYNCRA</text>
+</svg>
