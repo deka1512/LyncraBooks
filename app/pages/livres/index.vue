@@ -25,6 +25,7 @@ useSeoMeta({
           <div class="book-info">
             <span class="book-category">{{ bookCategories(book).join(' · ') || 'Sélection Lyncra' }}</span>
             <h2><NuxtLink :to="`/livres/${book.slug}`">{{ book.title.rendered }}</NuxtLink></h2>
+            <p v-if="book.authors?.length" class="book-author">Par <NuxtLink v-for="(author, index) in book.authors" :key="author.id" :to="`/auteurs/${author.slug}">{{ index ? `, ` : '' }}{{ author.name }}</NuxtLink></p>
             <NuxtLink class="read-link" :to="`/livres/${book.slug}`">Découvrir le livre ↗</NuxtLink>
           </div>
         </article>
@@ -55,6 +56,8 @@ useSeoMeta({
 .book-info { padding-top:14px; }
 .book-category { color:var(--color-gold); font-size:12px; letter-spacing:.1em; text-transform:uppercase; }
 .book-info h2 { margin:7px 0 10px; color:var(--color-forest); font-family:var(--font-heading); font-size:24px; font-weight:600; line-height:1.1; }
+.book-author { margin:0 0 10px; color:var(--color-muted); font-size:13px; }
+.book-author a { color:var(--color-brown); font-weight:600; }
 .read-link { color:var(--color-brown); font-size:13px; font-weight:700; }
 .empty-state { margin-top:55px; padding:60px 24px; background:#fff; text-align:center; }
 .empty-icon { color:var(--color-gold); font-size:30px; }
