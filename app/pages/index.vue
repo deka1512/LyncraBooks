@@ -144,8 +144,10 @@ const collections = [
 .hero-copy h1 em { color: var(--color-gold); font-weight: 500; }
 .hero-description { max-width: 470px; margin: 24px 0 0; color: rgba(255,255,255,.78); font-size: 16px; line-height: 1.9; }
 .hero-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 25px; margin-top: 32px; }
-.hero-actions .button { background: var(--color-ivory); border-color: var(--color-ivory); color: var(--color-forest); }\n.hero-actions .button span,.button--light span { margin-left: 8px; color: var(--color-gold); }
-.text-link { color: var(--color-forest); font-size: 14px; font-weight: 700; }\n.hero-actions .text-link { color: var(--color-ivory); }
+.hero-actions .button { background: var(--color-ivory); border-color: var(--color-ivory); color: var(--color-forest); }
+.hero-actions .button span,.button--light span { margin-left: 8px; color: var(--color-gold); }
+.text-link { color: var(--color-forest); font-size: 14px; font-weight: 700; }
+.hero-actions .text-link { color: var(--color-ivory); }
 .hero-note { display: flex; align-items: center; gap: 12px; margin-top: 48px; color: rgba(255,255,255,.62); font-size: 12px; }
 .hero-note span { width: 34px; height: 1px; background: var(--color-gold); }
 .hero-image { position: relative; min-height: 490px; overflow: hidden; background: #d9d0c1; border: 1px solid rgba(255,255,255,.16); }

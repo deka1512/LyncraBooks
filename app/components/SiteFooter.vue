@@ -8,6 +8,7 @@ const phoneHref = `tel:${String(config.public.contactPhone || '').replace(/[^+\d
 const navigation = [
   { label: 'Accueil', to: '/' },
   { label: 'Nos livres', to: '/livres' },
+  { label: 'Nos auteurs', to: '/auteurs' },
   { label: 'Collections', to: '/collections' },
   { label: 'À propos', to: '/a-propos' },
   { label: 'Contact', to: '/contact' }

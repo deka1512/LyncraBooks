@@ -1,0 +1,79 @@
+<script setup lang="ts">
+import { authors } from '~/data/authors'
+import { books } from '~/data/books'
+
+const authorCards = authors.map(author => ({
+  ...author,
+  bookCount: books.filter(book => book.authorSlug === author.slug).length,
+}))
+
+useSeoMeta({
+  title: 'Nos auteurs | Lyncra Books',
+  description: 'Découvrez les auteurs et les collections éditoriales derrière les lectures de Lyncra Books.',
+})
+</script>
+
+<template>
+  <div>
+    <SiteHeader />
+    <main class="container authors-page">
+      <header class="page-heading">
+        <p class="eyebrow">Les voix derrière les livres</p>
+        <h1>Nos auteurs et collections.</h1>
+        <p>
+          Découvrez les personnes et les univers éditoriaux qui accompagnent
+          votre cheminement dans la foi et la connaissance biblique.
+        </p>
+      </header>
+
+      <div class="authors-grid">
+        <article v-for="author in authorCards" :key="author.slug" class="author-card">
+          <NuxtLink :to="`/auteurs/${author.slug}`" class="author-visual" :aria-label="`Découvrir ${author.name}`">
+            <span class="author-monogram" aria-hidden="true">L</span>
+            <span class="author-number">LYNCRA BOOKS</span>
+          </NuxtLink>
+          <div class="author-content">
+            <p class="eyebrow">{{ author.role }}</p>
+            <h2><NuxtLink :to="`/auteurs/${author.slug}`">{{ author.name }}</NuxtLink></h2>
+            <p>{{ author.shortBio }}</p>
+            <div class="author-meta">
+              <span>{{ author.bookCount }} ouvrage(s) au catalogue</span>
+              <NuxtLink :to="`/auteurs/${author.slug}`">Voir la bibliographie ↗</NuxtLink>
+            </div>
+          </div>
+        </article>
+      </div>
+      <p class="editorial-note">
+        Les profils individuels seront enrichis au fur et à mesure de la confirmation
+        des informations bibliographiques des ouvrages.
+      </p>
+    </main>
+    <SiteFooter />
+  </div>
+</template>
+
+<style scoped>
+.authors-page { min-height: 60vh; padding-block: 76px 100px; }
+.page-heading { max-width: 760px; margin-bottom: 48px; }
+.eyebrow { margin: 0 0 12px; color: var(--color-gold); font-size: 11px; font-weight: 700; letter-spacing: .17em; text-transform: uppercase; }
+.page-heading h1 { margin: 0; color: var(--color-forest); font-family: var(--font-heading); font-size: clamp(42px,6vw,68px); font-weight: 600; line-height: 1; }
+.page-heading > p:last-child { max-width: 590px; margin-top: 20px; color: var(--color-muted); line-height: 1.85; }
+.authors-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 26px; }
+.author-card { overflow: hidden; border: 1px solid var(--color-border); border-radius: 22px; background: #fff; box-shadow: var(--shadow-soft); }
+.author-visual { position: relative; display: grid; min-height: 230px; place-items: center; overflow: hidden; background: radial-gradient(circle at 50% 45%,#315b4c 0,#193c32 55%,#102b23 100%); color: var(--color-ivory); }
+.author-visual::before,.author-visual::after { position: absolute; width: 230px; height: 230px; border: 1px solid rgba(217,195,147,.28); border-radius: 50%; content: ''; }
+.author-visual::after { width: 175px; height: 175px; }
+.author-monogram { z-index: 1; color: #e1d0aa; font-family: var(--font-heading); font-size: 112px; line-height: 1; }
+.author-number { position: absolute; right: 22px; bottom: 18px; color: rgba(255,255,255,.62); font-size: 9px; letter-spacing: .2em; }
+.author-content { padding: 25px; }
+.author-content h2 { margin: 7px 0 10px; color: var(--color-forest); font-family: var(--font-heading); font-size: 32px; font-weight: 600; }
+.author-content > p:not(.eyebrow) { min-height: 55px; color: var(--color-muted); font-size: 14px; line-height: 1.8; }
+.author-meta { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; margin-top: 22px; padding-top: 16px; border-top: 1px solid var(--color-border); color: var(--color-muted); font-size: 11px; }
+.author-meta a { color: var(--color-forest); font-weight: 700; }
+.editorial-note { margin-top: 28px; color: var(--color-muted); font-size: 12px; line-height: 1.7; }
+@media (max-width: 700px) {
+  .authors-page { padding-block: 54px 72px; }
+  .authors-grid { grid-template-columns: 1fr; }
+  .author-visual { min-height: 190px; }
+}
+</style>

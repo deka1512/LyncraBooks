@@ -4,7 +4,6 @@ export default defineNuxtConfig({
   css: ['~/assets/css/main.css'],
   modules: [],
   runtimeConfig: {
-    wordpressUrl: '',
     public: {
       siteUrl: '',
       whatsappNumber: '243822870759',

@@ -1,46 +1,59 @@
 # Lyncra Books
 
-Site vitrine et catalogue de livres de Lyncra Books.
-
+Site vitrine et catalogue de livres chrétiens de Lyncra Books.
 
 ## Stack
 
-- Nuxt 4 / Vue 3
+- Nuxt 4
+- Vue 3
 - TypeScript
-- WordPress Headless via l'API REST
 - CSS natif avec variables de design
-- Commandes et demandes via WhatsApp
+- Catalogue statique local
+- Demandes et commandes via WhatsApp
+
+**Périmètre actuel :** le site fonctionne sans WordPress, sans API externe et sans base de données. Les livres et les profils éditoriaux sont gérés dans les fichiers TypeScript du projet.
 
 ## Développement local
 
 Prérequis : Node.js 22 ou plus récent.
 
 ```bash
-npm install
-cp .env.example .env
+npm ci
 npm run dev
 ```
 
-## Variables d'environnement
+Pour générer la version de production :
 
-- `NUXT_WORDPRESS_URL` : URL de l'installation WordPress (sans slash final).
-- `NUXT_PUBLIC_SITE_URL` : URL publique du site Nuxt.
-- `NUXT_PUBLIC_WHATSAPP_NUMBER` : numéro WhatsApp au format international, chiffres uniquement (ex. indicatif pays + numéro, sans `+` ni espaces).
+```bash
+npm run build
+npm run preview
+```
 
-## Configuration WordPress
+## Gestion du catalogue
 
-Le frontend attend un type de contenu personnalisé exposé par l'API REST sous le point d'accès `/wp-json/wp/v2/books`.
+Les données sont centralisées dans :
 
-Dans WordPress, le type de contenu des livres doit notamment avoir :
+- `app/data/books.ts` : titres, résumés, catégories, couvertures, prix et auteur associé.
+- `app/data/authors.ts` : profils des auteurs et collections éditoriales.
+- `public/images/books/` : couvertures SVG locales.
 
-- `show_in_rest: true`
-- un slug REST `books`
-- le support du titre, du contenu, de l'extrait et de l'image mise en avant
-- une ou plusieurs taxonomies exposées dans REST pour organiser les ouvrages
+Pour ajouter un livre, ajouter une entrée dans `books.ts`, renseigner son `authorSlug` et placer sa couverture dans `public/images/books/`.
 
-Les images mises en avant sont utilisées comme couvertures. Les termes des taxonomies (hors étiquettes) sont affichés comme catégories sur les fiches.
+Pour ajouter un auteur, créer son profil dans `authors.ts`, puis associer ses livres à son slug.
 
-Le site gère proprement l'absence d'URL WordPress ou un catalogue vide : les pages restent consultables avec un état vide informatif.
+Les prix actuels sont des valeurs de démonstration : ils doivent être confirmés avant toute publication commerciale.
+
+## Pages
+
+- `/` : accueil et sélection de livres
+- `/livres` : catalogue et filtres par catégorie
+- `/livres/:slug` : fiche d'un livre et commande WhatsApp
+- `/auteurs` : répertoire des auteurs et collections éditoriales
+- `/auteurs/:slug` : profil et bibliographie
+- `/collections` : présentation des univers éditoriaux
+- `/a-propos` : présentation de Lyncra Books
+- `/contact` : coordonnées et contact WhatsApp
+- `/faq` : questions fréquentes
 
 ## Identité visuelle — Élégance naturelle
 
@@ -55,16 +68,6 @@ Le site gère proprement l'absence d'URL WordPress ou un catalogue vide : les pa
 - Titres : Cormorant Garamond
 - Interface : Inter
 
-## Pages
-
-- `/` : accueil et sélection de livres
-- `/livres` : catalogue dynamique
-- `/livres/:slug` : fiche d'un livre et commande WhatsApp
-- `/collections` : univers éditoriaux
-- `/a-propos` : présentation de Lyncra Books
-- `/contact` : contact WhatsApp
-- `/faq` : questions fréquentes
-
 ## Périmètre commercial
 
 - Pas de compte client.
@@ -75,4 +78,4 @@ Le site gère proprement l'absence d'URL WordPress ou un catalogue vide : les pa
 
 ## Qualité
 
-Le workflow GitHub Actions `Nuxt build` lance l'installation des dépendances et `npm run build` sur chaque push ou pull request vers `main`.
+Le workflow GitHub Actions `Nuxt build` exécute `npm ci` puis `npm run build` sur les push vers `main` et les branches `feature/**`, ainsi que sur les pull requests ciblant `main`.

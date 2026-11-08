@@ -15,7 +15,7 @@ function formatPrice(price: number | null, currency: 'USD' | 'CDF') {
     <div class="book-info">
       <span class="book-category">{{ book.category }}</span>
       <h3><NuxtLink :to="'/livres/' + book.slug">{{ book.title }}</NuxtLink></h3>
-      <p class="book-author">{{ book.author }}</p>
+      <NuxtLink class="book-author" :to="'/auteurs/' + book.authorSlug">{{ book.author }}</NuxtLink>
       <div class="book-bottom"><strong class="book-price">{{ formatPrice(book.price, book.currency) }}</strong><NuxtLink class="book-link" :to="'/livres/' + book.slug">Voir le livre <span>↗</span></NuxtLink></div>
     </div>
   </article>
@@ -29,7 +29,7 @@ function formatPrice(price: number | null, currency: 'USD' | 'CDF') {
 .image-arrow{position:absolute;right:13px;bottom:13px;display:grid;width:40px;height:40px;place-items:center;border-radius:50%;background:var(--color-forest);color:white}
 .book-info{padding:17px 17px 19px}.book-category{color:var(--color-gold);font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
 .book-info h3{margin:8px 0 3px;color:var(--color-forest);font-family:var(--font-heading);font-size:24px;font-weight:600;line-height:1.08}
-.book-author{margin:0 0 15px;color:var(--color-muted);font-size:12px}
+.book-author{display:inline-block;margin:0 0 15px;color:var(--color-muted);font-size:12px;text-decoration:none}.book-author:hover{color:var(--color-gold)}
 .book-bottom{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px;padding-top:12px;border-top:1px solid var(--color-border)}
 .book-price{color:var(--color-forest);font-size:13px}.book-link{color:var(--color-forest);font-size:12px;font-weight:700}.book-link span{margin-left:4px;color:var(--color-gold)}
 @media(prefers-reduced-motion:reduce){.book-card,.book-image img{transition:none}}
