@@ -9,7 +9,7 @@ useSeoMeta({title:()=>book.title+' | Lyncra Books',description:book.summary})
 </script>
 <template>
 <div><SiteHeader/><main class="container detail-main"><NuxtLink to="/livres" class="back-link">← Retour au catalogue</NuxtLink><div class="detail-grid">
-<div class="detail-cover"><img :src="book.image" :alt="'Ambiance de lecture pour '+book.title"></div>
+<div class="detail-cover"><img :src="book.image" :alt="'Couverture du livre '+book.title"></div>
 <div class="detail-copy"><p class="eyebrow">{{book.category}}</p><h1>{{book.title}}</h1><p class="author">{{book.author}}</p><p class="summary">{{book.summary}}</p><div class="price-panel"><span>Prix du livre</span><strong>{{formatPrice(book.price,book.currency)}}</strong></div><a class="order-button" :href="orderLink(book.title)" target="_blank" rel="noopener noreferrer">Se renseigner / commander sur WhatsApp ↗</a><p class="order-note">Contactez-nous pour confirmer la disponibilité et les modalités de commande.</p></div>
 </div></main><SiteFooter/></div>
 </template>
