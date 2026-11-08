@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800">
+<rect width="600" height="800" fill="#d9c7a5"/>
+<rect x="42" y="42" width="516" height="716" fill="none" stroke="#6d5944" stroke-width="2"/>
+<rect x="62" y="62" width="476" height="676" fill="none" stroke="#fff7e8" stroke-width="2" opacity=".8"/>
+<circle cx="300" cy="390" r="172" fill="none" stroke="#8d714b" stroke-width="3"/>
+<circle cx="300" cy="390" r="140" fill="none" stroke="#8d714b" opacity=".45"/>
+<path d="M300 170v440M80 390h440" stroke="#8d714b" opacity=".25"/>
+<path d="M300 270 350 390 300 510 250 390Z" fill="none" stroke="#8d714b" stroke-width="2"/>
+<text x="300" y="125" fill="#4b4033" font-family="Arial,sans-serif" font-size="19" text-anchor="middle" letter-spacing="7">LYNCRA BOOKS</text>
+<text x="300" y="350" fill="#263d33" font-family="Georgia,serif" font-size="66" text-anchor="middle">UNE VIE</text>
+<text x="300" y="420" fill="#263d33" font-family="Georgia,serif" font-size="48" text-anchor="middle">AVEC INTENTION</text>
+<text x="300" y="500" fill="#6c5741" font-family="Arial,sans-serif" font-size="16" text-anchor="middle" letter-spacing="4">COLLECTION LYNCRA</text>
+</svg>
