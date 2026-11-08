@@ -9,7 +9,7 @@ function formatPrice(price: number | null, currency: 'USD' | 'CDF') {
 <template>
   <article class="book-card">
     <NuxtLink :to="'/livres/' + book.slug" class="book-image">
-      <img :src="book.image" :alt="'Ambiance de lecture pour ' + book.title" loading="lazy">
+      <img :src="book.image" :alt="'Couverture du livre ' + book.title" loading="lazy">
       <span class="image-arrow" aria-hidden="true">↗</span>
     </NuxtLink>
     <div class="book-info">
