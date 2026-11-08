@@ -6,6 +6,7 @@ const menuOpen = ref(false)
 const links = [
   { label: 'Livres', to: '/livres' },
   { label: 'Collections', to: '/collections' },
+  { label: 'Auteurs', to: '/auteurs' },
   { label: 'À propos', to: '/a-propos' },
   { label: 'Contact', to: '/contact' },
   { label: 'FAQ', to: '/faq' },
