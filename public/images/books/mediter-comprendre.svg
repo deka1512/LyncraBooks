@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800">
+<defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#eee5d5"/><stop offset="1" stop-color="#c7b99e"/></linearGradient></defs>
+<rect width="600" height="800" fill="url(#bg)"/>
+<rect x="54" y="54" width="492" height="692" fill="none" stroke="#5b6b58" stroke-width="2"/>
+<path d="M105 560 205 410 280 485 390 290 495 420" fill="none" stroke="#9a7951" stroke-width="7"/>
+<circle cx="390" cy="290" r="22" fill="#9a7951"/>
+<path d="M300 180v410M120 385h360" stroke="#5b6b58" opacity=".2"/>
+<text x="300" y="135" fill="#34483c" font-family="Arial,sans-serif" font-size="19" text-anchor="middle" letter-spacing="7">LYNCRA BOOKS</text>
+<text x="300" y="315" fill="#34483c" font-family="Georgia,serif" font-size="57" text-anchor="middle">MÉDITER ET</text>
+<text x="300" y="385" fill="#34483c" font-family="Georgia,serif" font-size="60" text-anchor="middle">COMPRENDRE</text>
+<path d="M220 435h160" stroke="#9a7951" stroke-width="3"/>
+<text x="300" y="500" fill="#806c49" font-family="Arial,sans-serif" font-size="16" text-anchor="middle" letter-spacing="4">COLLECTION LYNCRA</text>
+<text x="300" y="700" fill="#806c49" font-family="Arial,sans-serif" font-size="13" text-anchor="middle" letter-spacing="4">ÉCOUTER · MÉDITER · GRANDIR</text>
+</svg>
